@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@import "./css/chat-list.css";
+
+.example-block {
+  border: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "first second third fourth";
+  grid-template-columns: 70px 260px auto 201px;
+
+  /* background-image: linear-gradient(to bottom right, rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239), rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215), rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192), rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168)); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-wrapper::after {
+  content: "";
+  position: fixed;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-image: url(./img/background-image.jpg);
+  background-size: 100%;
+  background-size: cover;
+  filter: blur(20px);
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.chat-list { 
+  grid-area: first;
+}  
+
+.current { 
+  grid-area: second; 
 }
 
-.App-link {
-  color: #61dafb;
+.main-window { 
+  grid-area: third; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.view-profile { 
+  grid-area: fourth; 
+}
+
+h2 {
+  margin: 0;
+}
+
+.chat-list,
+.current,
+.main-window,
+.view-profile {
+  height: 100vh;
 }
