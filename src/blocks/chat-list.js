@@ -1,8 +1,8 @@
 import React from "react";
 
-const ChatList = () => (
+const ChatList = (props) => (
     <div>
-        <h2 className="example-block chat-list">Чат-лист</h2>
+        <h2 className="example-block chat-list" onClick={props.click}>Чат-лист</h2>
     </div>
 )
 
