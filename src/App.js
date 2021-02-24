@@ -11,15 +11,6 @@ class App extends React.Component {
     chatList: undefined
   };
 
-  generateChatlist() {
-    for (let i = 0; i < this.state.chatList.length; i++) {
-      let chat = <div></div>
-      console.log("Gotit")
-      return chat;
-    }
-  };
-
-
   getChatlistData = async () => {
     const chatListData = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await chatListData.json();
@@ -28,6 +19,13 @@ class App extends React.Component {
     console.log(this.state);
   };
 
+  makeChatList() {
+    for (let i = 0; i < this.state.chatList.length; i++) {
+      let chat = <div></div>
+      console.log("Gotit")
+      return chat;
+    }
+  };
 
   render() {
     return (
