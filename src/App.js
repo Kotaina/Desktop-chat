@@ -1,13 +1,29 @@
 import './css/App.scss';
 import React from "react";
 import ChatItem from './blocks/chat-item';
+import Current from './blocks/current';
 
 class App extends React.Component {
 
   state = {
-    chatList: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    chatList: [
+      { id: 1, chatName: "Work", isOpen: false },
+      { id: 2, chatName: "Fitness", isOpen: false },
+      { id: 3, chatName: "My street", isOpen: false }
+    ],
+    currentView: {
+      chatName: "kek"
+    },
     isChatsLoaded: true
   };
+  // Не меняется название чата в currentView
+  onItemClickHandler(evt) {
+    let clikedItemId = evt.target.id
+    let neededName = this.state.chatList[clikedItemId].chatName
+    let oldGuy = this.state.currentView.chatName
+    oldGuy = neededName
+    console.log(this.state)
+  }
 
   render() {
 
@@ -18,6 +34,8 @@ class App extends React.Component {
         return (
           <ChatItem
             key={index}
+            index={index}
+            onItemClick={(evt) => { this.onItemClickHandler(evt) }}
           />
         )
       }
@@ -34,6 +52,7 @@ class App extends React.Component {
 
         <section className="Current">
           <h1 className="visually-hidden">Current chat</h1>
+          <Current />
         </section>
 
         <section className="Main">

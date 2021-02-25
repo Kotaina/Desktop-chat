@@ -1,0 +1,20 @@
+.Current {
+    background-color: rgba(0,0,0, .2);
+    padding: 30px;
+    padding-top: 30px;
+    color: white;
+}
+
+$blinkw: rgba(255,255,255, .7);
+
+h1 {
+    margin: 0;
+}
+
+p {
+    color: $blinkw;
+    &:hover,
+    &:focus {
+        color: white
+    }
+}
