@@ -1,37 +1,11 @@
-import './App.css';
+import './css/App.scss';
 import React from "react";
+import ChatItem from './blocks/chat-item';
 
 class App extends React.Component {
 
   state = {
-    chatList: [
-      {
-        id: 1
-      },
-      {
-        id: 2
-      },
-      {
-        id: 3
-      }
-
-    ]
-  };
-
-  getChatlistData = async () => {
-    const chatListData = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await chatListData.json();
-    console.log(`Incoming data of users is: ${data}`);
-    this.state.chatList = data;
-    console.log(this.state);
-  };
-
-  makeChatList() {
-    for (let i = 0; i < this.state.chatList.length; i++) {
-      let chat = <div></div>
-      console.log("Gotit")
-      return chat;
-    }
+    chatList: [{ id: 1 }, { id: 2 }, { id: 3 }]
   };
 
   render() {
@@ -40,6 +14,11 @@ class App extends React.Component {
 
         <section className="Chat-list">
           <h1 className="visually-hidden">Chat List</h1>
+          <ChatItem />
+          <ChatItem />
+          <ChatItem />
+          <ChatItem />
+          <ChatItem />
         </section>
 
         <section className="Current">
