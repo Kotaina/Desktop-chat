@@ -1,12 +1,8 @@
 import './App.css';
 import React from "react";
-import ChatList from "./blocks/chat-list";
-import Current from "./blocks/current-chat";
-import MainWindow from "./blocks/window";
-import Profile from "./blocks/view-profile";
-
 
 class App extends React.Component {
+
   state = {
     chatList: [
       {
@@ -38,23 +34,25 @@ class App extends React.Component {
     }
   };
 
-  // chats = this.state.chatList.map((car, index) => {
-  //   return (
-  //     <ChatList
-  //     />
-  //   )
-  // })
-
   render() {
     return (
       <div className="main-wrapper">
-        <ChatList
-          // click={this.getChatlistData}
-          generateChatlist
-        />
-        <Current />
-        <MainWindow />
-        <Profile />
+
+        <section className="Chat-list">
+          <h1 className="visually-hidden">Chat List</h1>
+        </section>
+
+        <section className="Current">
+          <h1 className="visually-hidden">Current chat</h1>
+        </section>
+
+        <section className="Main">
+          <h1 className="visually-hidden">Main Window</h1>
+        </section>
+
+        <section className="Profile">
+          <h1 className="visually-hidden">Profile window</h1>
+        </section>
       </div>
     )
   }
