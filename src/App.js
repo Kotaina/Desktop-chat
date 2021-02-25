@@ -5,20 +5,31 @@ import ChatItem from './blocks/chat-item';
 class App extends React.Component {
 
   state = {
-    chatList: [{ id: 1 }, { id: 2 }, { id: 3 }]
+    chatList: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    isChatsLoaded: true
   };
 
   render() {
+
+    let chats = null;
+
+    if (this.state.isChatsLoaded) {
+      chats = this.state.chatList.map((chat, index) => {
+        return (
+          <ChatItem
+            key={index}
+          />
+        )
+      }
+      )
+    }
+
     return (
       <div className="main-wrapper">
 
         <section className="Chat-list">
           <h1 className="visually-hidden">Chat List</h1>
-          <ChatItem />
-          <ChatItem />
-          <ChatItem />
-          <ChatItem />
-          <ChatItem />
+          {chats}
         </section>
 
         <section className="Current">
