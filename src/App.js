@@ -8,7 +8,18 @@ import Profile from "./blocks/view-profile";
 
 class App extends React.Component {
   state = {
-    chatList: undefined
+    chatList: [
+      {
+        id: 1
+      },
+      {
+        id: 2
+      },
+      {
+        id: 3
+      }
+
+    ]
   };
 
   getChatlistData = async () => {
@@ -27,11 +38,18 @@ class App extends React.Component {
     }
   };
 
+  // chats = this.state.chatList.map((car, index) => {
+  //   return (
+  //     <ChatList
+  //     />
+  //   )
+  // })
+
   render() {
     return (
       <div className="main-wrapper">
         <ChatList
-          click={this.getChatlistData}
+          // click={this.getChatlistData}
           generateChatlist
         />
         <Current />
