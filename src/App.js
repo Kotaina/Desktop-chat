@@ -8,21 +8,9 @@ class App extends React.Component {
 
   state = {
     activeChat: { channels: [], friends: [] },
-    fetchedData: [],
-    chatList: [
-      {
-        id: 0,
-        chatName: "Work",
-        isOpen: false,
-        channels: ["general", "support", "marketing", "thailand", "bali", "poland"],
-        friends: ["Orlando Diggs", "Carmen Velasco", "Marie Jensen", "Alex Lee", "Leo Gill", "Britney Cooper"]
-      },
-      { id: 1, chatName: "Fitness", isOpen: false },
-      { id: 2, chatName: "My street", isOpen: false }
-    ],
+    chatList: [],
     isChatsLoaded: true
   };
-
 
   // Работа отображения с объектами
   onItemClickHandler(evt) {
@@ -33,22 +21,6 @@ class App extends React.Component {
       return { activeChat: currentObject }
     })
   }
-
-
-  // Рабочее получение данных с сервера
-  // componentDidMount = async () => {
-  //   console.log(`The state nowadays is: `)
-  //   console.log(this.state)
-  //   const incomingFetchData = await fetch("https://jsonplaceholder.typicode.com/users");
-  //   const parsedData = await incomingFetchData.json()
-  //   let newStateData = [...this.state.fetchedData]
-  //   this.setState(function () {
-  //     newStateData = parsedData
-  //     return { fetchedData: newStateData }
-  //   })
-  //   console.log('The state after fetch is: ')
-  //   console.log(this.state)
-  // }
 
   // Загрузка данных из локального файла
   componentDidMount = async () => {
@@ -61,7 +33,6 @@ class App extends React.Component {
   }
 
   render() {
-
     let viewChat = this.state.activeChat
 
     // Формирование чатов по количеству объектов в state.chatList
