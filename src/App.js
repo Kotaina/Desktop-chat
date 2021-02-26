@@ -6,13 +6,14 @@ import Current from './blocks/current';
 class App extends React.Component {
 
   state = {
-    activeChat: {},
+    activeChat: { channels: [], friends: [] },
     chatList: [
       {
         id: 0,
         chatName: "Work",
         isOpen: false,
-        channels: ["general", "support", "marketing", "thailand", "bali", "poland"]
+        channels: ["general", "support", "marketing", "thailand", "bali", "poland"],
+        friends: ["Orlando Diggs", "Carmen Velasco", "Marie Jensen", "Alex Lee", "Leo Gill", "Britney Cooper"]
       },
       { id: 1, chatName: "Fitness", isOpen: false },
       { id: 2, chatName: "My street", isOpen: false }
@@ -27,10 +28,11 @@ class App extends React.Component {
     this.setState(function () {
       return { activeChat: currentObject }
     })
-    console.log(this.state)
   }
 
   render() {
+
+    let viewChat = this.state.activeChat
 
     // Формирование чатов по количеству объектов в state.chatList
     let chats = null;
@@ -58,7 +60,9 @@ class App extends React.Component {
         <section className="Current">
           <h1 className="visually-hidden">Current chat</h1>
           <Current
-            chatName={this.state.activeChat.chatName}
+            chatName={viewChat.chatName}
+            channels={viewChat.channels}
+            friends={viewChat.friends}
           />
         </section>
 
