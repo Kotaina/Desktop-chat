@@ -6,7 +6,7 @@ class Current extends React.Component {
         let allChatChannels
         allChatChannels = this.props.channels.map((channel, index) => {
             return (
-                <li key={index}>{channel}</li>
+                <li key={index}># {channel}</li>
             )
         })
 

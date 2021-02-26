@@ -1,0 +1,67 @@
+[
+  {
+    "id": 0,
+    "chatName": "Work",
+    "isOpen": false,
+    "channels": [
+      "general",
+      "support",
+      "marketing",
+      "thailand",
+      "bali",
+      "poland"
+    ],
+    "friends": [
+      "Orlando Diggs",
+      "Carmen Velasco",
+      "Marie Jensen",
+      "Alex Lee",
+      "Leo Gill",
+      "Britney Cooper"
+    ]
+  },
+  {
+    "id": 1,
+    "chatName": "Fitness",
+    "isOpen": false,
+    "channels": [
+      "instructors",
+      "support",
+      "zones",
+      "coaches",
+      "stuff"
+    ],
+    "friends": [
+      "Mini Pigg1",
+      "Mini Pigg2",
+      "Mini Pigg3",
+      "Mini Pigg4"
+    ]
+  },
+  {
+    "id": 2,
+    "chatName": "My neighborhood",
+    "isOpen": false,
+    "channels": [
+      "my house",
+      "my street",
+      "house lights",
+      "danger trees",
+      "cleaners",
+      "car parking lots",
+      "outside noise problems"
+    ],
+    "friends": [
+      "Leanne Graham",
+      "Ervin Howell",
+      "Clementine Bauch",
+      "Patricia Lebsack",
+      "Chelsey Dietrich",
+      "Mrs. Dennis Schulist",
+      "Kurtis Weissnat",
+      "Maxime Nienow",
+      "Glenna Reichert",
+      "Clementina DuBuque"
+    ]
+  }
+]
