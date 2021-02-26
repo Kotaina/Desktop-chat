@@ -2,6 +2,7 @@ import './css/App.scss';
 import React from "react";
 import ChatItem from './blocks/chat-item';
 import Current from './blocks/current';
+import Main from './blocks/main'
 import data from "./data/data.json"
 
 class App extends React.Component {
@@ -69,6 +70,7 @@ class App extends React.Component {
 
         <section className="Main">
           <h1 className="visually-hidden">Main Window</h1>
+          <Main />
         </section>
 
         <section className="Profile">

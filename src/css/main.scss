@@ -1,0 +1,51 @@
+.Main {
+    background-color: #F2F2F2;
+    background-color: white;
+}
+
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 47px;
+    padding-top: 32px;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-header__current-chat {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.main-header__people,
+.main-header__current-chat,
+.main-header__search,
+.main-header__ring-btn,
+.main-header__more-btn {
+    margin-right: 10px;
+}
+
+.main-header__ring-btn,
+.main-header__more-btn {
+    width: 42px;
+    height: 25px;
+    background-color: white;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+    &:hover,
+    &:focus {
+        background-color: #ccc;
+        color: grey;
+        border-color: black;
+    }
+}
+
+.chat-window {
+    height: calc(100vh - 80px - 70px);
+    border-bottom: 1px solid grey;
+    overflow-y: auto;
+}
