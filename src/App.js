@@ -6,29 +6,34 @@ import Current from './blocks/current';
 class App extends React.Component {
 
   state = {
+    activeChat: {},
     chatList: [
-      { id: 1, chatName: "Work", isOpen: false },
-      { id: 2, chatName: "Fitness", isOpen: false },
-      { id: 3, chatName: "My street", isOpen: false }
+      {
+        id: 0,
+        chatName: "Work",
+        isOpen: false,
+        channels: ["general", "support", "marketing", "thailand", "bali", "poland"]
+      },
+      { id: 1, chatName: "Fitness", isOpen: false },
+      { id: 2, chatName: "My street", isOpen: false }
     ],
-    currentView: {
-      chatName: "kek"
-    },
     isChatsLoaded: true
   };
-  // Не меняется название чата в currentView
+
   onItemClickHandler(evt) {
     let clikedItemId = evt.target.id
-    let neededName = this.state.chatList[clikedItemId].chatName
-    let oldGuy = this.state.currentView.chatName
-    oldGuy = neededName
+    let fullObject = [...this.state.chatList]
+    let currentObject = fullObject[clikedItemId]
+    this.setState(function () {
+      return { activeChat: currentObject }
+    })
     console.log(this.state)
   }
 
   render() {
 
+    // Формирование чатов по количеству объектов в state.chatList
     let chats = null;
-
     if (this.state.isChatsLoaded) {
       chats = this.state.chatList.map((chat, index) => {
         return (
@@ -52,7 +57,9 @@ class App extends React.Component {
 
         <section className="Current">
           <h1 className="visually-hidden">Current chat</h1>
-          <Current />
+          <Current
+            chatName={this.state.activeChat.chatName}
+          />
         </section>
 
         <section className="Main">

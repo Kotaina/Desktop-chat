@@ -5,7 +5,7 @@ class Current extends React.Component {
     render() {
         return (
             <>
-                <h1>Name</h1>
+                <h1>{this.props.chatName}</h1>
                 <p>All treads</p>
                 <p>Channels</p>
                 <ul>
