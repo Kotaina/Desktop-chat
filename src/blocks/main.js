@@ -3,10 +3,13 @@ import "../css/main.scss"
 
 class Main extends React.Component {
     render() {
+
+        let activeChannel = this.props.activeChannel
+
         return (
             <>
                 <section className="main-header">
-                    <h3 className="main-header__current-chat">hashtag</h3>
+                    <h3 className="main-header__current-chat">{activeChannel}</h3>
                     <div className="main-header__people">
                         <span>1,654</span>
                     </div>
@@ -17,11 +20,11 @@ class Main extends React.Component {
                 <section className="chat-window">
 
                 </section>
-                <section>
-                    <button>Clip files</button>
-                    <button>Voice</button>
-                    <input />
-                    <button>smile</button>
+                <section className="new-messge-field">
+                    <button className="new-messge-field__clip-btn">Clip files</button>
+                    <button className="new-messge-field__voice-btn">Voice</button>
+                    <input className="new-messge-field__input" placeholder={activeChannel} />
+                    <button className="new-messge-field__smile-btn">smile</button>
                 </section>
             </>
         )

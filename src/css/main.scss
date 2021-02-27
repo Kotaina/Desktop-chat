@@ -27,7 +27,11 @@
 }
 
 .main-header__ring-btn,
-.main-header__more-btn {
+.main-header__more-btn,
+
+.new-messge-field__clip-btn,
+.new-messge-field__voice-btn,
+.new-messge-field__smile-btn {
     width: 42px;
     height: 25px;
     background-color: white;
@@ -45,7 +49,43 @@
 }
 
 .chat-window {
-    height: calc(100vh - 80px - 70px);
+    height: calc(100vh - 80px - 60px);
     border-bottom: 1px solid grey;
     overflow-y: auto;
+}
+
+.new-messge-field {
+    display: flex;
+    justify-content: flex-end;
+    padding: 13px;
+}
+
+.new-messge-field__input {
+    flex-grow: 1;
+}
+
+.new-messge-field__clip-btn,
+.new-messge-field__voice-btn,
+.new-messge-field__smile-btn, 
+.new-messge-field__input {
+    margin-right: 13px;
+}
+
+.new-messge-field__input {
+    border: none;
+    outline: none;
+
+
+    &:hover,
+    &:focus {
+        border: 1px solid gray;
+        box-shadow: 0 0 2px grey;
+
+        border-radius: 5px;
+    }
+
+    &:active {
+        outline: none;
+        box-shadow: 0 0 2px black;
+    }
 }

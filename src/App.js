@@ -8,6 +8,7 @@ import data from "./data/data.json"
 class App extends React.Component {
 
   state = {
+    activeChannel: "",
     activeChat: { channels: [], friends: [] },
     chatList: [],
     isChatsLoaded: true
@@ -33,6 +34,10 @@ class App extends React.Component {
     })
   }
 
+  onChannelClickHandler(evt) {
+    console.log(evt.target.textContent)
+  }
+
   render() {
     let viewChat = this.state.activeChat
 
@@ -51,6 +56,8 @@ class App extends React.Component {
       )
     }
 
+
+
     return (
       <div className="main-wrapper">
 
@@ -65,12 +72,15 @@ class App extends React.Component {
             chatName={viewChat.chatName}
             channels={viewChat.channels}
             friends={viewChat.friends}
+            onChannelClick={(evt) => { this.onChannelClickHandler(evt) }}
           />
         </section>
 
         <section className="Main">
           <h1 className="visually-hidden">Main Window</h1>
-          <Main />
+          <Main
+            activeChannel={this.state.activeChannel}
+          />
         </section>
 
         <section className="Profile">
