@@ -34,8 +34,15 @@ class App extends React.Component {
     })
   }
 
+  // Определение текущего канала
   onChannelClickHandler(evt) {
     console.log(evt.target.textContent)
+    let updatingChannel = [...this.state.activeChannel]
+    let choosenChannel = evt.target.textContent
+    this.setState(function () {
+      updatingChannel = choosenChannel
+      return { activeChannel: updatingChannel }
+    })
   }
 
   render() {
@@ -55,8 +62,6 @@ class App extends React.Component {
       }
       )
     }
-
-
 
     return (
       <div className="main-wrapper">

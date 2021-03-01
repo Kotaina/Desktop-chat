@@ -6,7 +6,12 @@ class Current extends React.Component {
         let allChatChannels
         allChatChannels = this.props.channels.map((channel, index) => {
             return (
-                <li key={index} onClick={this.props.onChannelClick}># {channel}</li>
+                <li
+                    key={index}
+                    onClick={this.props.onChannelClick}
+                    className="channel-items__item">
+                    # {channel}
+                </li>
             )
         })
 
@@ -19,10 +24,10 @@ class Current extends React.Component {
 
         return (
             <>
-                <h1>{this.props.chatName}</h1>
-                <p>All treads</p>
+                <h1 className="current__channel-name">{this.props.chatName}</h1>
+                <p className="current__all-threads">All threads</p>
                 <p>Channels</p>
-                <ul>
+                <ul className="current__channel-list channel-items">
                     {allChatChannels}
                 </ul>
                 <h3>Friends</h3>
