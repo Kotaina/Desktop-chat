@@ -10,15 +10,16 @@ class Current extends React.Component {
                     key={index}
                     onClick={this.props.onChannelClick}
                     className="channel-items__item">
-                    # {channel}
+                    #{channel}
                 </li>
             )
         })
 
         let allChatFriends
+        console.log(this.props.friends)
         allChatFriends = this.props.friends.map((friend, index) => {
             return (
-                <li key={index}>{friend}</li>
+                <li key={index}>{friend.name}</li>
             )
         })
 

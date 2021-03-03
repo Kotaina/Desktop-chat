@@ -23,7 +23,7 @@ class Main extends React.Component {
                 <section className="new-messge-field">
                     <button className="new-messge-field__clip-btn">Clip files</button>
                     <button className="new-messge-field__voice-btn">Voice</button>
-                    <input className="new-messge-field__input" placeholder={activeChannel} />
+                    <input className="new-messge-field__input" placeholder={"write to " + activeChannel} />
                     <button className="new-messge-field__smile-btn">smile</button>
                 </section>
             </>

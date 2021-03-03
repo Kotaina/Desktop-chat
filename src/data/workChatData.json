@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "chatName": "Work",
+        "channels": [
+            "general",
+            "support",
+            "marketing",
+            "thailand",
+            "bali",
+            "finn"
+        ],
+        "friends": [
+            {
+                "name": "Orlando Diggs",
+                "position": "Designer",
+                "username": "@O_Diggs",
+                "email": "diggs@me.com",
+                "skype": "diggy_orl",
+                "timezone": "undef"
+            },
+            {
+                "name": "Carmen Velasco",
+                "position": "Manager",
+                "username": "@Velasco",
+                "email": "vel_Carmen@me.com",
+                "skype": "vel_Carmen",
+                "timezone": "undef"
+            },
+            {
+                "name": "Marie Jensen",
+                "position": "HR",
+                "username": "@Marie_Jensen",
+                "email": "jensenmarie@me.com",
+                "skype": "m.Jensen",
+                "timezone": "undef"
+            },
+            {
+                "name": "Alex Lee",
+                "position": "Team Lead",
+                "username": "@Alex_Lee",
+                "email": "lee.A@me.com",
+                "skype": "AlexLee",
+                "timezone": "undef"
+            },
+            {
+                "name": "Leo Gill",
+                "position": "Manager",
+                "username": "@Leo",
+                "email": "leo@me.com",
+                "skype": "Gill.Leo",
+                "timezone": "undef"
+            },
+            {
+                "name": "Britney Cooper",
+                "position": "Intern",
+                "username": "@Cooper",
+                "email": "br.Cooper@me.com",
+                "skype": "Coope.r",
+                "timezone": "undef"
+            }
+        ]
+    }
+]

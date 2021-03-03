@@ -4,6 +4,8 @@ import ChatItem from './blocks/chat-item';
 import Current from './blocks/current';
 import Main from './blocks/main'
 import data from "./data/data.json"
+import workChatData from "./data/workChatData.json"
+import Profile from "./blocks/profile"
 
 class App extends React.Component {
 
@@ -14,15 +16,30 @@ class App extends React.Component {
     isChatsLoaded: true
   };
 
-  // Работа отображения с объектами
-  onItemClickHandler(evt) {
-    let clikedItemId = evt.target.id
-    let fullObject = [...this.state.chatList]
-    let currentObject = fullObject[clikedItemId]
-    this.setState(function () {
-      return { activeChat: currentObject }
-    })
+  // Необходимо добавить загрузку разных файлов, в каждом из которых будут полные данные обо всём
+  onItemClickHandler = async (evt) => {
+    let clickedChatId = evt.target.id
+    console.log(clickedChatId)
+    if (clickedChatId === "0") {
+      console.log("init")
+      const importedChoosenChatData = await workChatData
+      let parsedData = importedChoosenChatData
+      console.log(parsedData)
+      this.setState(function () {
+        return { activeChat: parsedData[clickedChatId] }
+      })
+    }
   }
+
+  // Переключение между чатами
+  // onItemClickHandler(evt) {
+  //   let clikedItemId = evt.target.id
+  //   let fullObject = [...this.state.chatList]
+  //   let currentObject = fullObject[clikedItemId]
+  //   this.setState(function () {
+  //     return { activeChat: currentObject }
+  //   })
+  // }
 
   // Загрузка данных из локального файла
   componentDidMount = async () => {
@@ -47,6 +64,7 @@ class App extends React.Component {
 
   render() {
     let viewChat = this.state.activeChat
+    console.log(viewChat.friends)
 
     // Формирование чатов по количеству объектов в state.chatList
     let chats = null;
@@ -88,8 +106,9 @@ class App extends React.Component {
           />
         </section>
 
-        <section className="Profile">
+        <section className="profile">
           <h1 className="visually-hidden">Profile window</h1>
+          <Profile />
         </section>
       </div>
     )

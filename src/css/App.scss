@@ -7,7 +7,7 @@
   height: 100vh;
   display: grid;
   grid-template-areas: "first second third fourth";
-  grid-template-columns: 70px 260px auto 201px;
+  grid-template-columns: 70px 260px auto 230px;
 }
 
 .main-wrapper::after {
@@ -34,7 +34,7 @@
   grid-area: third; 
 }
 
-.Profile { 
+.profile { 
   grid-area: fourth; 
 }
 
