@@ -16,10 +16,15 @@ class Current extends React.Component {
         })
 
         let allChatFriends
-        console.log(this.props.friends)
         allChatFriends = this.props.friends.map((friend, index) => {
             return (
-                <li key={index}>{friend.name}</li>
+                <li
+                    id={friend.id}
+                    key={index}
+                    className="friend-items__friend"
+                    onClick={this.props.onFriendClick}>
+                    {friend.name}
+                </li>
             )
         })
 
@@ -32,7 +37,7 @@ class Current extends React.Component {
                     {allChatChannels}
                 </ul>
                 <h3>Friends</h3>
-                <ul>
+                <ul className="current__friend-list friend-items">
                     {allChatFriends}
                 </ul>
             </>

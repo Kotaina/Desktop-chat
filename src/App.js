@@ -3,7 +3,6 @@ import React from "react";
 import ChatItem from './blocks/chat-item';
 import Current from './blocks/current';
 import Main from './blocks/main'
-import data from "./data/data.json"
 import workChatData from "./data/workChatData.json"
 import Profile from "./blocks/profile"
 
@@ -11,6 +10,7 @@ class App extends React.Component {
 
   state = {
     activeChannel: "",
+    activeProfile: {},
     activeChat: { channels: [], friends: [] },
     chatList: [],
     isChatsLoaded: true
@@ -19,31 +19,16 @@ class App extends React.Component {
   // Необходимо добавить загрузку разных файлов, в каждом из которых будут полные данные обо всём
   onItemClickHandler = async (evt) => {
     let clickedChatId = evt.target.id
-    console.log(clickedChatId)
-    if (clickedChatId === "0") {
-      console.log("init")
-      const importedChoosenChatData = await workChatData
-      let parsedData = importedChoosenChatData
-      console.log(parsedData)
-      this.setState(function () {
-        return { activeChat: parsedData[clickedChatId] }
-      })
-    }
-  }
+    const importedChoosenChatData = await workChatData
+    this.setState(function () {
+      return { activeChat: importedChoosenChatData[clickedChatId] }
+    })
 
-  // Переключение между чатами
-  // onItemClickHandler(evt) {
-  //   let clikedItemId = evt.target.id
-  //   let fullObject = [...this.state.chatList]
-  //   let currentObject = fullObject[clikedItemId]
-  //   this.setState(function () {
-  //     return { activeChat: currentObject }
-  //   })
-  // }
+  }
 
   // Загрузка данных из локального файла
   componentDidMount = async () => {
-    const importedData = await data
+    const importedData = await workChatData
     let newStateData = [...this.state.chatList]
     this.setState(function () {
       newStateData = importedData
@@ -53,7 +38,6 @@ class App extends React.Component {
 
   // Определение текущего канала
   onChannelClickHandler(evt) {
-    console.log(evt.target.textContent)
     let updatingChannel = [...this.state.activeChannel]
     let choosenChannel = evt.target.textContent
     this.setState(function () {
@@ -62,9 +46,16 @@ class App extends React.Component {
     })
   }
 
+  onFriendClickHandler(evt) {
+    let choosenProfileId = evt.target.id
+    let choosenProfile = this.state.activeChat.friends[choosenProfileId]
+    this.setState({
+      activeProfile: choosenProfile
+    })
+  }
+
   render() {
     let viewChat = this.state.activeChat
-    console.log(viewChat.friends)
 
     // Формирование чатов по количеству объектов в state.chatList
     let chats = null;
@@ -80,7 +71,6 @@ class App extends React.Component {
       }
       )
     }
-
     return (
       <div className="main-wrapper">
 
@@ -95,7 +85,9 @@ class App extends React.Component {
             chatName={viewChat.chatName}
             channels={viewChat.channels}
             friends={viewChat.friends}
+
             onChannelClick={(evt) => { this.onChannelClickHandler(evt) }}
+            onFriendClick={(evt) => { this.onFriendClickHandler(evt) }}
           />
         </section>
 
@@ -108,7 +100,9 @@ class App extends React.Component {
 
         <section className="profile">
           <h1 className="visually-hidden">Profile window</h1>
-          <Profile />
+          <Profile
+            activeProfile={this.state.activeProfile}
+          />
         </section>
       </div>
     )

@@ -3,11 +3,12 @@ import "../css/Profile.scss"
 
 class Profile extends React.Component {
     render() {
+        let currentProfile = this.props.activeProfile
         return (
             <>
                 <section className="profile__photo"></section>
-                <h3 className="profile__name">Default Name</h3>
-                <h4 className="profile__position">Def Position</h4>
+                <h3 className="profile__name">{currentProfile.name}</h3>
+                <h4 className="profile__position">{currentProfile.position}</h4>
                 <section className="profile__links social">
                     <a className=" social__link social__link--fb" href='fb.com'>FB</a>
                     <a className=" social__link social__link--insta" href='instagram.com'>IN</a>
@@ -18,19 +19,19 @@ class Profile extends React.Component {
                 <ul className="profile__more additional">
                     <li className="additional__username">
                         Username:
-                        <span></span>
+                        <span>{currentProfile.username}</span>
                     </li>
                     <li className="additional__email">
                         Email:
-                        <span></span>
+                        <span>{currentProfile.email}</span>
                     </li>
                     <li className="additional__skype">
                         Skype:
-                        <span></span>
+                        <span>{currentProfile.skype}</span>
                     </li>
                     <li className="additional__timezone">
                         Timezone:
-                        <span></span>
+                        <span>{currentProfile.timezone}</span>
                     </li>
                 </ul>
             </>

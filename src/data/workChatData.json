@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "chatName": "Work",
         "channels": [
             "general",
@@ -12,6 +12,7 @@
         ],
         "friends": [
             {
+                "id": 0,
                 "name": "Orlando Diggs",
                 "position": "Designer",
                 "username": "@O_Diggs",
@@ -20,6 +21,7 @@
                 "timezone": "undef"
             },
             {
+                "id": 1,
                 "name": "Carmen Velasco",
                 "position": "Manager",
                 "username": "@Velasco",
@@ -28,6 +30,7 @@
                 "timezone": "undef"
             },
             {
+                "id": 2,
                 "name": "Marie Jensen",
                 "position": "HR",
                 "username": "@Marie_Jensen",
@@ -36,6 +39,7 @@
                 "timezone": "undef"
             },
             {
+                "id": 3,
                 "name": "Alex Lee",
                 "position": "Team Lead",
                 "username": "@Alex_Lee",
@@ -44,6 +48,7 @@
                 "timezone": "undef"
             },
             {
+                "id": 4,
                 "name": "Leo Gill",
                 "position": "Manager",
                 "username": "@Leo",
@@ -52,11 +57,61 @@
                 "timezone": "undef"
             },
             {
+                "id": 5,
                 "name": "Britney Cooper",
                 "position": "Intern",
                 "username": "@Cooper",
                 "email": "br.Cooper@me.com",
                 "skype": "Coope.r",
+                "timezone": "undef"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "chatName": "Fitness",
+        "channels": [
+            "instructors",
+            "support",
+            "zones",
+            "coaches",
+            "stuff"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Susan Tail",
+                "position": "instructor",
+                "username": "@Tail_s",
+                "email": "ssusan_@workout.com",
+                "skype": "Sauan_Tail",
+                "timezone": "undef"
+            },
+            {
+                "id": 1,
+                "name": "Margareth Wok",
+                "position": "House manager",
+                "username": "@margWok",
+                "email": "wok-m@workout.com",
+                "skype": "Wok_Margareth",
+                "timezone": "undef"
+            },
+            {
+                "id": 2,
+                "name": "Greg Daniels",
+                "position": "co-worker",
+                "username": "@Gregg",
+                "email": "G.Daniels@workout.com",
+                "skype": "Daniels.G",
+                "timezone": "undef"
+            },
+            {
+                "id": 3,
+                "name": "Mike Judge",
+                "position": "co-worker",
+                "username": "@Mikky",
+                "email": "mike.Judge@workout.com",
+                "skype": "j.udgeMike",
                 "timezone": "undef"
             }
         ]
