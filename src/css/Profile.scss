@@ -1,3 +1,58 @@
+.profile--wrapper {
+    padding: 20px;
+}
+
 .profile {
     background-color: rgba(232,232,235, .8);
+}
+
+.profile__photo {
+    height: 216px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(93,81,194,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.profile__name {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.profile__position {
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.profile__links {
+    margin-bottom: 10px;
+}
+
+.social__link {
+    width: 10px;
+    border: 1px solid black;
+    border-radius: 1px;
+    margin-right: 15px;
+}
+
+.profile__message-btn {
+    background-color: #3577EF;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: none;
+    height: 25px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.profile__more {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.additional__item {
+    margin-bottom: 5px
 }

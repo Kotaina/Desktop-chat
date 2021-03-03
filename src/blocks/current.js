@@ -32,11 +32,11 @@ class Current extends React.Component {
             <>
                 <h1 className="current__channel-name">{this.props.chatName}</h1>
                 <p className="current__all-threads">All threads</p>
-                <p>Channels</p>
+                <h4>Channels <span className="current__counter"> {allChatChannels.length}</span></h4>
                 <ul className="current__channel-list channel-items">
                     {allChatChannels}
                 </ul>
-                <h3>Friends</h3>
+                <h4>Friends <span className="current__counter"> {allChatFriends.length}</span></h4>
                 <ul className="current__friend-list friend-items">
                     {allChatFriends}
                 </ul>
