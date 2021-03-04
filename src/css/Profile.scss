@@ -15,13 +15,15 @@
 .profile__name {
     font-size: 16px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .profile__position {
     font-size: 12px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #5F6164;
+
 }
 
 .profile__links {
@@ -45,6 +47,7 @@
     height: 25px;
     border: none;
     margin-bottom: 15px;
+    cursor: not-allowed;
 }
 
 .profile__more {
@@ -54,5 +57,10 @@
 }
 
 .additional__item {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    color: #5F6164;
+}
+
+.additional__item__text-content {
+    color: black;
 }

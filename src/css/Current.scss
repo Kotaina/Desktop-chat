@@ -24,11 +24,11 @@ p {
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-        width: 0;
+        width: 0px;
        }
 }
 
@@ -36,38 +36,49 @@ p {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-        width: 0;
+        width: 0px;
        }
 
 }
 
-.channel-items__item {
-    cursor: pointer;
-    color: rgba(255,255,255, .7);
-    margin-bottom: 5px;
-
-    &:focus,
-    &:hover {
-        color: rgba(255,255,255, 1);
-    }
-
-}
-
+.channel-items__item,
 .friend-items__friend {
     cursor: pointer;
     color: rgba(255,255,255, .7);
     margin-bottom: 5px;
-
+    height: 27px;
+    vertical-align: middle;
+    padding-left: 8px;
 
     &:focus,
     &:hover {
         color: rgba(255,255,255, 1);
+        border-radius: 3px;
+        background-color: rgba(255,255,255, .7);
+        // box-shadow: 0 0 2px;
     }
+
+    &:active {
+        box-shadow: inset 1px 1px 2px black;
+    }
+
 }
+
+// .friend-items__friend {
+//     cursor: pointer;
+//     color: rgba(255,255,255, .7);
+//     margin-bottom: 5px;
+
+
+//     &:focus,
+//     &:hover {
+//         color: rgba(255,255,255, 1);
+//     }
+// }
 
 h4 {
     margin: 0;

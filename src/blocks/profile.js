@@ -20,19 +20,19 @@ class Profile extends React.Component {
                     <ul className="profile__more additional">
                         <li className="additional__item additional__item--username">
                             Username: <br />
-                            <span>{currentProfile.username}</span>
+                            <span className="additional__item__text-content">{currentProfile.username}</span>
                         </li>
                         <li className="additional__item additional__item--email">
                             Email: <br />
-                            <span>{currentProfile.email}</span>
+                            <span className="additional__item__text-content">{currentProfile.email}</span>
                         </li>
                         <li className="additional__item additional__item--skype">
                             Skype: <br />
-                            <span>{currentProfile.skype}</span>
+                            <span className="additional__item__text-content">{currentProfile.skype}</span>
                         </li>
                         <li className="additional__item additional__item--timezone">
                             Timezone: <br />
-                            <span>{currentProfile.timezone}</span>
+                            <span className="additional__item__text-content">{currentProfile.timezone}</span>
                         </li>
                     </ul>
                 </div>
