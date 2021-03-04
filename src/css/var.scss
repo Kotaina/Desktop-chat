@@ -1,0 +1,6 @@
+@mixin basic-font($fontSize, $lineHeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+
+  $blinkWhite: rgba(255,255,255, .7);

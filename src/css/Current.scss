@@ -1,3 +1,5 @@
+@import "./var.scss";
+
 .Current {
     background-color: rgba(0,0,0, .3);
     padding: 30px;
@@ -5,14 +7,13 @@
     color: white;
 }
 
-$blinkw: rgba(255,255,255, .7);
 
 h1 {
     margin: 0;
 }
 
 p {
-    color: $blinkw;
+    color: $blinkWhite;
     &:hover,
     &:focus {
         color: white
@@ -48,18 +49,20 @@ p {
 .channel-items__item,
 .friend-items__friend {
     cursor: pointer;
-    color: rgba(255,255,255, .7);
+    color: $blinkWhite;
     margin-bottom: 5px;
     height: 27px;
     vertical-align: middle;
     padding-left: 8px;
+    font-size: 16px;
+    line-height: 26px;
+
 
     &:focus,
     &:hover {
         color: rgba(255,255,255, 1);
         border-radius: 3px;
-        background-color: rgba(255,255,255, .7);
-        // box-shadow: 0 0 2px;
+        background-color: $blinkWhite;
     }
 
     &:active {
@@ -67,18 +70,6 @@ p {
     }
 
 }
-
-// .friend-items__friend {
-//     cursor: pointer;
-//     color: rgba(255,255,255, .7);
-//     margin-bottom: 5px;
-
-
-//     &:focus,
-//     &:hover {
-//         color: rgba(255,255,255, 1);
-//     }
-// }
 
 h4 {
     margin: 0;
@@ -89,7 +80,3 @@ h4 {
     color: rgba(255,255,255, .7);
 
 }
-
-// .current__counter {
-//     margin-left: 100%;
-// }
