@@ -61,10 +61,12 @@
 }
 
 .additional__item {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: #5F6164;
 }
 
 .additional__item__text-content {
+    display: inline-block;
+    margin-top: 5px;
     color: black;
 }
