@@ -104,10 +104,15 @@ class App extends React.Component {
             activeProfile={this.state.activeProfile}
           />
         </section>
+        <section className="profile">
+          <h1 className="visually-hidden">Profile window</h1>
+          <Profile
+            activeProfile={this.state.activeProfile}
+          />
+        </section>
       </div>
     )
   }
 };
-
 
 export default App;
